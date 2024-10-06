@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<dummify__cp_typical angina &le; 0.5<br/>gini = 0.5<br/>samples = 210<br/>value = [107, 103]<br/>class = at_risk>, fillcolor="#fefaf8"] ;
+1 [label=<remainder__age &le; 56.5<br/>gini = 0.283<br/>samples = 117<br/>value = [97, 20]<br/>class = at_risk>, fillcolor="#ea9b62"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<gini = 0.0<br/>samples = 77<br/>value = [77, 0]<br/>class = at_risk>, fillcolor="#e58139"] ;
+1 -> 2 ;
+3 [label=<dummify__sex_male &le; 0.5<br/>gini = 0.5<br/>samples = 40<br/>value = [20, 20]<br/>class = at_risk>, fillcolor="#ffffff"] ;
+1 -> 3 ;
+4 [label=<gini = 0.0<br/>samples = 20<br/>value = [20, 0]<br/>class = at_risk>, fillcolor="#e58139"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 20<br/>value = [0, 20]<br/>class = not_at_risk>, fillcolor="#399de5"] ;
+3 -> 5 ;
+6 [label=<remainder__trtbps &le; 107.0<br/>gini = 0.192<br/>samples = 93<br/>value = [10, 83]<br/>class = not_at_risk>, fillcolor="#51a9e8"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label=<remainder__thalach &le; 149.0<br/>gini = 0.375<br/>samples = 4<br/>value = [3, 1]<br/>class = at_risk>, fillcolor="#eeab7b"] ;
+6 -> 7 ;
+8 [label=<gini = 0.0<br/>samples = 3<br/>value = [3, 0]<br/>class = at_risk>, fillcolor="#e58139"] ;
+7 -> 8 ;
+9 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1]<br/>class = not_at_risk>, fillcolor="#399de5"] ;
+7 -> 9 ;
+10 [label=<remainder__thalach &le; 160.5<br/>gini = 0.145<br/>samples = 89<br/>value = [7, 82]<br/>class = not_at_risk>, fillcolor="#4aa5e7"] ;
+6 -> 10 ;
+11 [label=<gini = 0.051<br/>samples = 76<br/>value = [2, 74]<br/>class = not_at_risk>, fillcolor="#3ea0e6"] ;
+10 -> 11 ;
+12 [label=<gini = 0.473<br/>samples = 13<br/>value = [5, 8]<br/>class = not_at_risk>, fillcolor="#b5daf5"] ;
+10 -> 12 ;
+}
